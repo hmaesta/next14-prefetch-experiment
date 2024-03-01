@@ -1,10 +1,6 @@
 const wait = (n: number) => new Promise((resolve) => setTimeout(resolve, n));
 
-const randomIntFromInterval = (min: number, max: number) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
-
-async function getData() {
-  const id = randomIntFromInterval(1, 300);
+async function getData(id: string) {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
 
   await wait(3000);
@@ -17,10 +13,8 @@ async function getData() {
   return res.json();
 }
 
-export default async function Page() {
-  const data = await getData();
-
-  // return <pre>{JSON.stringify(data, null, 2)}</pre>;
+export default async function Page({ params }: { params: { id: string } }) {
+  const data = await getData(params.id);
 
   return (
     <div>

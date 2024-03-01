@@ -9,36 +9,18 @@ export default function Home() {
 
       <ul className="list-disc pl-5 mt-5">
         <li>
-          <Link href="/get-data-from-server" prefetch={undefined}>
-            /get-data-from-server - prefetch=undefined
+          <Link href="/prefetch-undefined">
+            <span className=" text-violet-600">prefetch=undefined</span>
           </Link>
         </li>
         <li>
-          <Link href="/get-data-from-server" prefetch={true}>
-            /get-data-from-server - prefetch=true
+          <Link href="/prefetch-true">
+            <span className=" text-green-600">prefetch=true</span>
           </Link>
         </li>
         <li>
-          <Link href="/get-data-from-server" prefetch={false}>
-            /get-data-from-server - prefetch=false
-          </Link>
-        </li>
-      </ul>
-
-      <ul className="list-disc pl-5 mt-5">
-        <li>
-          <Link href="/get-static" prefetch={undefined}>
-            /get-static - prefetch=undefined
-          </Link>
-        </li>
-        <li>
-          <Link href="/get-static" prefetch={true}>
-            /get-static - prefetch=true
-          </Link>
-        </li>
-        <li>
-          <Link href="/get-static" prefetch={false}>
-            /get-static - prefetch=false
+          <Link href="/prefetch-false">
+            <span className=" text-red-600">prefetch=false</span>
           </Link>
         </li>
       </ul>

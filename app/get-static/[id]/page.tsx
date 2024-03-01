@@ -1,8 +1,5 @@
 const wait = (n: number) => new Promise((resolve) => setTimeout(resolve, n));
 
-const randomIntFromInterval = (min: number, max: number) =>
-  Math.floor(Math.random() * (max - min + 1) + min);
-
 async function getData(id: string) {
   const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
 
